@@ -21,6 +21,11 @@ Vue.use(ToastPlugin)
 Vue.use(AlertPlugin)
 Vue.use(ConfirmPlugin)
 
+router.beforeEach((to, from, next) => {
+    document.title = "小盒公益";
+  	next();
+})
+
 /* eslint-disable no-new */
 new Vue({
   router,
